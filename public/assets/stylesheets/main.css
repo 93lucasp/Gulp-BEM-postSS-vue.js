@@ -1,0 +1,51 @@
+body {
+  background: blue; }
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: red;
+  -webkit-transition: width 2s;
+  transition: width 2s; }
+
+.item .ex {
+    color: red; }
+
+@-webkit-keyframes example {
+  0% {
+    background-color: red; }
+  25% {
+    background-color: yellow; }
+  50% {
+    background-color: blue; }
+  100% {
+    background-color: green; } }
+
+@keyframes example {
+  0% {
+    background-color: red; }
+  25% {
+    background-color: yellow; }
+  50% {
+    background-color: blue; }
+  100% {
+    background-color: green; } }
+
+:-webkit-full-screen a {
+  display: -webkit-box;
+  display: flex; }
+
+:-moz-full-screen a {
+  display: flex; }
+
+:-ms-fullscreen a {
+  display: -ms-flexbox;
+  display: flex; }
+
+:fullscreen a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/*# sourceMappingURL=main.css.map */

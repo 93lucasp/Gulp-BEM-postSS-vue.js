@@ -1,0 +1,19 @@
+{
+  "name": "Gulp-BEM-postSS-vue.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/93lucasp/Gulp-BEM-postSS-vue.js.git",
+  "author": "LucaS <spezzanoluca@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^2.6.1",
+    "postcss": "^6.0.13",
+    "precss": "^2.0.0"
+  }
+}
