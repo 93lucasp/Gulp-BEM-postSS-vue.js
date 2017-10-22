@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     sourcemaps = require('gulp-sourcemaps'),
     gulpSequence = require('gulp-sequence'),
+    reload      = browserSync.reload;
     sass = require('gulp-sass');
 
 
@@ -12,7 +13,6 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(gulp.dest("./src/assets/stylesheets"))
         .pipe(browserSync.stream());
-    browserSync.reload();
 });
 
 gulp.task('css', function () {
@@ -27,15 +27,23 @@ gulp.task('html', function() {
     return gulp.src("./src/**/*.html")
         .pipe(gulp.dest("./public/"));
 });
+gulp.task('js', function() {
+    return gulp.src("./src/assets/js/*.js")
+        .pipe(gulp.dest("./public/assets/js"));
+});
 gulp.task('serve', function () {
     browserSync.init({
+        open: false,
+        reloadDelay: 1000,
         server: {
             baseDir: "./public"
         }
     });
 });
 
-gulp.watch("./src/assets/stylesheets/**/*.css", ['sass']);
-gulp.watch("./src/*.html").on('change', browserSync.reload);
+gulp.watch("./src/assets/stylesheets/**/*.scss", ['sass']);
+gulp.watch("./src/assets/stylesheets/**/*.css", ['css']).on('change', browserSync.reload);
+gulp.watch("./src/assets/js/*.js", ['js']).on('change', browserSync.reload);
+gulp.watch("./src/*.html", ['html']).on('change', browserSync.reload);
 
-gulp.task('default', gulpSequence('sass', 'html','css', 'serve', ));
+gulp.task('default', gulpSequence('sass','css','js', 'serve', ));
