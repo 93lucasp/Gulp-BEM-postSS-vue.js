@@ -1,29 +1,18 @@
 body {
-  background: green; }
+  background: pink; }
 
-.item {
-  display: flex;
-  background: red;
-  transition: width 2s; }
-  .item .ex {
-    color: red; }
+.demo {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: inline-block;
+  margin: 5px; }
 
-@keyframes example {
-  0% {
-    background-color: red; }
-  25% {
-    background-color: yellow; }
-  50% {
-    background-color: blue; }
-  100% {
-    background-color: green; } }
+.blue {
+  background-color: blue; }
 
-:fullscreen a {
-  display: flex; }
+.green {
+  background-color: green; }
 
-:root {
-  --red: #d33;
-  --bau: ciao; }
-
-a:hover {
-  color: color(var(--bau) a(54%)); }
+.pink {
+  background-color: pink; }

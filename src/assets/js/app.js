@@ -48,7 +48,7 @@ new Vue({
 
         }
 
-    },
+    },  
 /*
     when counter change it runs
 */
@@ -110,7 +110,8 @@ new Vue({
 new Vue({
     el: '#exercise4',
     data: {
-        value: 0
+        value: 0,
+
     },
     computed: {
         result: function() {
@@ -127,4 +128,17 @@ new Vue({
         }
     },
 
+});
+
+new Vue({
+    el: '#exercise5',
+    data: {
+        attachBlue: false,
+         color: 'blue'
+    },
+    computed: {
+        isAttached: function() {
+            return this.attachBlue;
+        }
+    }
 });
