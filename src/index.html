@@ -12,6 +12,7 @@
             <h1 v-once>{{ title }}</h1>
             {{ sayHello() }}
             <a v-bind:href=" link "> here</a>
+        <!--<a :href=" link "> here</a>-->
             <!-- <img v-bind:src=" img " alt=""> -->
         </p>
         <p v-html="linkFinished">
@@ -19,6 +20,7 @@
         </p>
     </div>
 
+    <hr>
     <div id="exercise">
         <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
         <p>VueJS is pretty cool - {{name}} ({{age}})</p>
@@ -35,12 +37,20 @@
             <input type="text" v-bind:placeholder="name">
         </div>
     </div>
+    <hr>
+
 
     <div id="counter">
-        <button v-on:click="increase(2,$event)">Click me</button>
-        <button v-on:click="counter++">Click me</button>
-        <h1>{{counter}}</h1>
-        <h1>{{counter > 10 ? "maggiore di 10" : "minore di 10"}}</h1>
+        <!--<button v-on:click="increase">increase</button>
+        <button v-on:click="decrease">decrease</button>-->
+       <!-- <button v-on:click="counter++">increase</button>-->
+        <button @click="counter++">increase</button>
+        <button v-on:click="counter--">decrease</button>
+        <button v-on:click="counter2++">increase2</button>
+       <!-- <button v-on:click="counter++">Click me</button>-->
+        <h1>{{counter}} | {{counter2}}</h1>
+        <h2>{{ result() }} | {{ output }}</h2>
+       <!-- <h1>{{counter > 10 ? "maggiore di 10" : "minore di 10"}}</h1>-->
         <p v-on:mousemove="updateCoordinates">
             coordinates: {{ x }} {{ y }} -
             <span v-on:mousemove.stop=""> dead spot </span>
@@ -48,6 +58,10 @@
         <input type="text" v-on:keyup.enter="alertMe">
     </div>
 
+
+
+
+    <hr>
     <div id="exercise2">
          <!-- 1) Show an alert when the Button gets clicked -->
         <div>
@@ -65,14 +79,33 @@
         </div>
 
     </div>
+    <hr>
+
+    <div id="exercise3">
+
+        <div>
+            <input type="text" v-model="name">
+            <p>{{name}}</p>
+        </div>
 
 
+    </div>
 
 
-
-
-
-
+    <div id="exercise4">
+        <!-- 1) Show a "result" of 'not there yet' as long as "value" is not equal to 37 - you can change "value" with the buttons. Print 'done' once you did it -->
+        <div>
+            <p>Current Value: {{ value }}</p>
+            <button @click="value += 5">Add 5</button>
+            <button @click="value += 1">Add 1</button>
+            <p>{{ result }}</p>
+        </div>
+        <!-- 2) Watch for changes in the "result" and reset the "value" after 5 seconds (hint: setTimeout(..., 5000) -->
+        <div>
+            <input type="text">
+            <p>{{ value }}</p>
+        </div>
+    </div>
 
 
 

@@ -35,13 +35,45 @@ new Vue({
     el: '#counter',
     data: {
         counter: 0,
+        counter2: 0,
         x: 0,
         y: 0
 
     },
+    computed: {
+
+        output: function() {
+            console.log("output");
+            return this.counter > 10 ? 'greater then 10' : 'smaller then 10';
+
+        }
+
+    },
+/*
+    when counter change it runs
+*/
+    watch: {
+        counter: function(value) {
+            var vm = this;
+            setTimeout(function() {
+                vm.counter=0;
+            }, 2000);
+        }
+    },
     methods: {
-        increase: function (step, event) {
-            return this.counter += step;
+     /*
+        increase: function () {
+            this.counter++;
+
+        },
+        decrease: function () {
+            this.counter--;
+        },
+     */
+        result: function() {
+            console.log("result");
+            return this.counter > 10 ? 'greater then 10' : 'smaller then 10';
+
         },
         updateCoordinates: function (event) {
             this.x = event.clientX;
@@ -52,6 +84,7 @@ new Vue({
         }
     }
 });
+
 
 new Vue({
     el: '#exercise2',
@@ -64,4 +97,34 @@ new Vue({
             return alert("alert");
         }
     }
+});
+
+new Vue({
+    el: '#exercise3',
+    data: {
+        name: "luca"
+
+    }
+});
+
+new Vue({
+    el: '#exercise4',
+    data: {
+        value: 0
+    },
+    computed: {
+        result: function() {
+            console.log("ciao")
+            return this.value > 37 ? 'done' : 'not there yet';
+        }
+    },
+    watch: {
+        value: function(value) {
+            var vm = this;
+            setTimeout(function() {
+                vm.value=0;
+            }, 5000);
+        }
+    },
+
 });

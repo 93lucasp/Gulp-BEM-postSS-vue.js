@@ -19,3 +19,13 @@ body {
 :fullscreen a {
     display: flex
 }
+
+:root {
+  --red: #d33;
+  --bau: ciao;
+}
+a {
+  &:hover {
+    color: color(var(--bau) a(54%));
+  }
+}

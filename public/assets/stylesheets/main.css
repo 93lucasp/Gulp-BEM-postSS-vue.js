@@ -48,4 +48,7 @@ body {
   display: -ms-flexbox;
   display: flex; }
 
+a:hover {
+  color: color(ciao a(54%)); }
+
 /*# sourceMappingURL=main.css.map */
