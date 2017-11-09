@@ -205,13 +205,19 @@
             </div>
         </section>
     </div>
-    <!--Section5-->
-    <!--<div id="exercise8">-->
-        <!--<h1 ref="heading">{{ title }}</h1>-->
-        <!--<button v-on:click="show">Show Paragraph</button>-->
-        <!--<p v-if="showParagraph">This is not always visible</p>-->
-    <!--</div>-->
-
+    Section5
+    <div id="exercise8">
+        <h1 ref="heading">{{ title }}</h1>
+        <button v-on:click="show" ref="myButton">Show Paragraph</button>
+        <p v-if="showParagraph" ref="parag">This is not always visible</p>
+    </div>
+    <div id="exercise9">
+        <h1 ref="heading">{{ title }}</h1>
+        <button v-on:click="onChange" ref="myButton">Show Paragraph</button>
+    </div>
+    <!--Templeting-->
+    <div id="exercise10">
+    </div>
     <script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
