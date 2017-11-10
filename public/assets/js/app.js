@@ -179,20 +179,19 @@ new Vue({
         }
     },
     methods: {
-        random: function (max, min) {
+        random: function(max, min) {
             return Math.floor(Math.random() * max) + min;
         },
-        checkWinner: function () {
+        checkWinner: function() {
             if (this.players.user.life < 1) {
-              alert(" You lost! ");
+                alert(" You lost! ");
                 this.giveUp();
-            }
-            else if (this.players.monster.life < 1) {
-               alert(" You Won! ");
+            } else if (this.players.monster.life < 1) {
+                alert(" You Won! ");
                 this.giveUp();
             }
         },
-        doAttack: function () {
+        doAttack: function() {
             var damage = this.random(10, 1);
             this.attack('user', damage);
             damage = this.random(10, 1);
@@ -200,33 +199,33 @@ new Vue({
             this.checkWinner();
 
         },
-        doSpecialAttack: function () {
+        doSpecialAttack: function() {
             var damage = this.random(16, 3);
             this.specialAttack('user', damage);
             damage = this.random(16, 3);
             this.specialAttack('monster', damage);
             this.checkWinner();
         },
-        doHeal: function () {
+        doHeal: function() {
             var heal = this.random(10, 1);
             this.heal('user', heal);
         },
 
-        attack: function (player, damage) {
+        attack: function(player, damage) {
             this.players[player].life -= damage;
             this.log('attack', {
                 to: player,
                 damage: damage
             });
         },
-        specialAttack: function (player, damage) {
+        specialAttack: function(player, damage) {
             this.players[player].life -= damage;
             this.log('specialAttack', {
                 to: player,
                 damage: damage
             });
         },
-        heal: function (player, heal) {
+        heal: function(player, heal) {
             if (this.players.user.life <= 1) {
                 this.players[player].life += heal;
             }
@@ -237,7 +236,7 @@ new Vue({
             });
         },
 
-        log: function (action, data) {
+        log: function(action, data) {
             if (action === 'attack') {
                 this.actions.unshift({
                     type: 'attack',
@@ -250,8 +249,7 @@ new Vue({
                     to: data.to,
                     heal: data.heal
                 });
-            }
-            else if (action === 'specialAttack') {
+            } else if (action === 'specialAttack') {
                 this.actions.unshift({
                     type: 'specialAttack',
                     to: data.to,
@@ -260,7 +258,7 @@ new Vue({
             }
         },
 
-        giveUp: function () {
+        giveUp: function() {
             this.players.user.life = 100;
             this.players.monster.life = 100;
             this.actions = [];
@@ -268,46 +266,82 @@ new Vue({
         }
     }
 });
-var vm1 = new Vue({
-    el: '#exercise8',
-    data: {
-        title: 'The VueJS Instance',
-        showParagraph: false
-    },
-    methods: {
-        show: function() {
-            this.showParagraph = true;
-            this.updateTitle('The VueJS Instance (Updated)');
-            console.log(this.$refs.heading.innerText);
-        },
-        updateTitle: function(title) {
-            this.title = title;
-        }
-    },
-    computed: {
-        lowercaseTitle: function() {
-            return this.title.toLowerCase();
-        }
-    },
-    watch: {
-        title: function(value) {
-            alert('Title changed, new value: ' + value);
-        }
-    }
-});
-var vm2 = new Vue({
-    el: '#exercise9',
-    data: {
-        title: 'second instance'
-    },
-    methods: {
-        onChange: function() {
-            vm1.title = 'Changed';
-        }
-    }
-});
+// var vm1 = new Vue({
+//     el: '#exercise8',
+//     data: {
+//         title: 'The VueJS Instance',
+//         showParagraph: false
+//     },
+//     methods: {
+//         show: function() {
+//             this.showParagraph = true;
+//             this.updateTitle('The VueJS Instance (Updated)');
+//             console.log(this.$refs.heading.innerText);
+//         },
+//         updateTitle: function(title) {
+//             this.title = title;
+//         }
+//     },
+//     computed: {
+//         lowercaseTitle: function() {
+//             return this.title.toLowerCase();
+//         }
+//     },
+//     watch: {
+//         title: function(value) {
+//             alert('Title changed, new value: ' + value);
+//         }
+//     }
+// });
+// var vm2 = new Vue({
+//     el: '#exercise9',
+//     data: {
+//         title: 'second instance'
+//     },
+//     methods: {
+//         onChange: function() {
+//             vm1.title = 'Changed';
+//         }
+//     }
+// });
 
-var vm3 = new Vue({
-    el: '#exercise10',
-    template: '<h1>hello</h1>',
+// var vm3 = new Vue({
+//     el: '#exercise10',
+//     template: '<h1>hello</h1>',
+// });
+
+// Vue.component('my-component', {
+//     data: function() {
+//         return { status: 'critical' }
+//     },
+//     template: '<div><h1>Ciao questo è lo status: {{ status }} </h1> <button @click="change">Change</button></div>',
+//     methods: {
+//         change: function() {
+//             this.status = 'normal';
+//         }
+//     }
+// });
+var component = {
+    data: function() {
+        return { status: 'critical' }
+    },
+    template: '<div><h1>Ciao questo è lo status: {{ status }} </h1> <button @click="change">Change</button></div>',
+    methods: {
+        change: function() {
+            this.status = 'normal';
+        }
+    }
+};
+new Vue({
+    el: '#exercise11',
+    components: {
+        'my-component': component
+    }
+
+
+});
+new Vue({
+    el: '#exercise12',
+
+
 });

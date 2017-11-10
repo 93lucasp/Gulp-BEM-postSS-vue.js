@@ -2,151 +2,150 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/stylesheets/main.css">
 </head>
 
 <body class="container">
     <!--<div id="app">-->
 
-        <!--<p>-->
-        <!--<h1 v-once>{{ title }}</h1>-->
-        <!--{{ sayHello() }}-->
-        <!--<a v-bind:href=" link "> here</a>-->
-        <!--&lt;!&ndash;<a :href=" link "> here</a>&ndash;&gt;-->
-        <!--&lt;!&ndash; <img v-bind:src=" img " alt=""> &ndash;&gt;-->
-        <!--</p>-->
-        <!--<p v-html="linkFinished">-->
+    <!--<p>-->
+    <!--<h1 v-once>{{ title }}</h1>-->
+    <!--{{ sayHello() }}-->
+    <!--<a v-bind:href=" link "> here</a>-->
+    <!--&lt;!&ndash;<a :href=" link "> here</a>&ndash;&gt;-->
+    <!--&lt;!&ndash; <img v-bind:src=" img " alt=""> &ndash;&gt;-->
+    <!--</p>-->
+    <!--<p v-html="linkFinished">-->
 
-        <!--</p>-->
+    <!--</p>-->
     <!--</div>-->
 
     <!--<hr>-->
     <!--<div id="exercise">-->
-        <!--&lt;!&ndash; 1) Fill the <p> below with your Name and Age - using Interpolation &ndash;&gt;-->
-        <!--<p>VueJS is pretty cool - {{name}} ({{age}})</p>-->
-        <!--&lt;!&ndash; 2) Output your age, multiplied by 3 &ndash;&gt;-->
-        <!--<p>{{age * 3}}</p>-->
-        <!--&lt;!&ndash; 3) Call a function to output a random float between 0 and 1 (Math.random()) &ndash;&gt;-->
-        <!--<p>{{ multiply() }}</p>-->
-        <!--&lt;!&ndash; 4) Search any image on Google and output it here by binding the "src" attribute &ndash;&gt;-->
-        <!--<div>-->
-            <!--<img v-bind:src=" img " style="width:100px;height:100px">-->
-        <!--</div>-->
-        <!--&lt;!&ndash; 5) Pre-Populate this input with your name (set the "value" attribute) &ndash;&gt;-->
-        <!--<div>-->
-            <!--<input type="text" v-bind:placeholder="name">-->
-        <!--</div>-->
+    <!--&lt;!&ndash; 1) Fill the <p> below with your Name and Age - using Interpolation &ndash;&gt;-->
+    <!--<p>VueJS is pretty cool - {{name}} ({{age}})</p>-->
+    <!--&lt;!&ndash; 2) Output your age, multiplied by 3 &ndash;&gt;-->
+    <!--<p>{{age * 3}}</p>-->
+    <!--&lt;!&ndash; 3) Call a function to output a random float between 0 and 1 (Math.random()) &ndash;&gt;-->
+    <!--<p>{{ multiply() }}</p>-->
+    <!--&lt;!&ndash; 4) Search any image on Google and output it here by binding the "src" attribute &ndash;&gt;-->
+    <!--<div>-->
+    <!--<img v-bind:src=" img " style="width:100px;height:100px">-->
+    <!--</div>-->
+    <!--&lt;!&ndash; 5) Pre-Populate this input with your name (set the "value" attribute) &ndash;&gt;-->
+    <!--<div>-->
+    <!--<input type="text" v-bind:placeholder="name">-->
+    <!--</div>-->
     <!--</div>-->
     <!--<hr>-->
 
 
     <!--<div id="counter">-->
-        <!--&lt;!&ndash;<button v-on:click="increase">increase</button>-->
-        <!--<button v-on:click="decrease">decrease</button>&ndash;&gt;-->
-        <!--&lt;!&ndash; <button v-on:click="counter++">increase</button>&ndash;&gt;-->
-        <!--<button @click="counter++">increase</button>-->
-        <!--<button v-on:click="counter&#45;&#45;">decrease</button>-->
-        <!--<button v-on:click="counter2++">increase2</button>-->
-        <!--&lt;!&ndash; <button v-on:click="counter++">Click me</button>&ndash;&gt;-->
-        <!--<h1>{{counter}} | {{counter2}}</h1>-->
-        <!--<h2>{{ result() }} | {{ output }}</h2>-->
-        <!--&lt;!&ndash; <h1>{{counter > 10 ? "maggiore di 10" : "minore di 10"}}</h1>&ndash;&gt;-->
-        <!--<p v-on:mousemove="updateCoordinates">-->
-            <!--coordinates: {{ x }} {{ y }} - -->
-            <!--<span v-on:mousemove.stop=""> dead spot </span>-->
-        <!--</p>-->
-        <!--<input type="text" v-on:keyup.enter="alertMe">-->
+    <!--&lt;!&ndash;<button v-on:click="increase">increase</button>-->
+    <!--<button v-on:click="decrease">decrease</button>&ndash;&gt;-->
+    <!--&lt;!&ndash; <button v-on:click="counter++">increase</button>&ndash;&gt;-->
+    <!--<button @click="counter++">increase</button>-->
+    <!--<button v-on:click="counter&#45;&#45;">decrease</button>-->
+    <!--<button v-on:click="counter2++">increase2</button>-->
+    <!--&lt;!&ndash; <button v-on:click="counter++">Click me</button>&ndash;&gt;-->
+    <!--<h1>{{counter}} | {{counter2}}</h1>-->
+    <!--<h2>{{ result() }} | {{ output }}</h2>-->
+    <!--&lt;!&ndash; <h1>{{counter > 10 ? "maggiore di 10" : "minore di 10"}}</h1>&ndash;&gt;-->
+    <!--<p v-on:mousemove="updateCoordinates">-->
+    <!--coordinates: {{ x }} {{ y }} - -->
+    <!--<span v-on:mousemove.stop=""> dead spot </span>-->
+    <!--</p>-->
+    <!--<input type="text" v-on:keyup.enter="alertMe">-->
     <!--</div>-->
 
 
     <!--<hr>-->
     <!--<div id="exercise2">-->
-        <!--&lt;!&ndash; 1) Show an alert when the Button gets clicked &ndash;&gt;-->
-        <!--<div>-->
-            <!--<button v-on:click="alertMe">alert</button>-->
-        <!--</div>-->
-        <!--&lt;!&ndash; 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) &ndash;&gt;-->
-        <!--<div>-->
-            <!--<input type="text" v-on:keydown="value = $event.target.value">-->
-            <!--<p>{{ value }}</p>-->
-        <!--</div>-->
-        <!--&lt;!&ndash; 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key &ndash;&gt;-->
-        <!--<div>-->
-            <!--<input type="text" v-on:keyup.enter="value = $event.target.value">-->
-            <!--<p>{{ value }}</p>-->
-        <!--</div>-->
+    <!--&lt;!&ndash; 1) Show an alert when the Button gets clicked &ndash;&gt;-->
+    <!--<div>-->
+    <!--<button v-on:click="alertMe">alert</button>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) &ndash;&gt;-->
+    <!--<div>-->
+    <!--<input type="text" v-on:keydown="value = $event.target.value">-->
+    <!--<p>{{ value }}</p>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key &ndash;&gt;-->
+    <!--<div>-->
+    <!--<input type="text" v-on:keyup.enter="value = $event.target.value">-->
+    <!--<p>{{ value }}</p>-->
+    <!--</div>-->
 
     <!--</div>-->
     <!--<hr>-->
 
     <!--<div id="exercise3">-->
 
-        <!--<div>-->
-            <!--<input type="text" v-model="name">-->
-            <!--<p>{{name}}</p>-->
-        <!--</div>-->
+    <!--<div>-->
+    <!--<input type="text" v-model="name">-->
+    <!--<p>{{name}}</p>-->
+    <!--</div>-->
 
 
     <!--</div>-->
 
 
     <!--<div id="exercise4">-->
-        <!--&lt;!&ndash; 1) Show a "result" of 'not there yet' as long as "value" is not equal to 37 - you can change "value" with the buttons. Print 'done' once you did it &ndash;&gt;-->
-        <!--<div>-->
-            <!--<p>Current Value: {{ value }}</p>-->
-            <!--<button @click="value += 5">Add 5</button>-->
-            <!--<button @click="value += 1">Add 1</button>-->
-            <!--<p>{{ result }}</p>-->
-        <!--</div>-->
-        <!--&lt;!&ndash; 2) Watch for changes in the "result" and reset the "value" after 5 seconds (hint: setTimeout(..., 5000) &ndash;&gt;-->
-        <!--<div>-->
-            <!--<input type="text">-->
-            <!--<p>{{ value }}</p>-->
-        <!--</div>-->
+    <!--&lt;!&ndash; 1) Show a "result" of 'not there yet' as long as "value" is not equal to 37 - you can change "value" with the buttons. Print 'done' once you did it &ndash;&gt;-->
+    <!--<div>-->
+    <!--<p>Current Value: {{ value }}</p>-->
+    <!--<button @click="value += 5">Add 5</button>-->
+    <!--<button @click="value += 1">Add 1</button>-->
+    <!--<p>{{ result }}</p>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; 2) Watch for changes in the "result" and reset the "value" after 5 seconds (hint: setTimeout(..., 5000) &ndash;&gt;-->
+    <!--<div>-->
+    <!--<input type="text">-->
+    <!--<p>{{ value }}</p>-->
+    <!--</div>-->
     <!--</div>-->
 
     <!--<div id="exercise5">-->
-        <!--<div class="demo" @click="attachBlue = !attachBlue" :class="{blue: isAttached}"></div>-->
-        <!--<div class="demo"></div>-->
-        <!--<div class="demo" :class="color"></div>-->
-        <!--<div>-->
-            <!--<input type="text" v-model="color">-->
-        <!--</div>-->
+    <!--<div class="demo" @click="attachBlue = !attachBlue" :class="{blue: isAttached}"></div>-->
+    <!--<div class="demo"></div>-->
+    <!--<div class="demo" :class="color"></div>-->
+    <!--<div>-->
+    <!--<input type="text" v-model="color">-->
+    <!--</div>-->
 
 
-        <!--<div></div>-->
+    <!--<div></div>-->
     <!--</div>-->
     <!--<hr>-->
     <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;_-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
     <!--&lt;!&ndash;Section3&ndash;&gt;-->
     <!--<div id="exercise6">-->
-        <!--<p v-if="show">You can see me!</p>-->
-        <!--<p v-else>now you see me tooooooo!</p>-->
-        <!--&lt;!&ndash;<templeate v-if="show">&ndash;&gt;-->
-        <!--&lt;!&ndash;<h1>Title</h1>&ndash;&gt;-->
-        <!--&lt;!&ndash;<p>Inside template</p>&ndash;&gt;-->
-        <!--&lt;!&ndash;</templeate>&ndash;&gt;-->
-        <!--<p v-show="show">Do you also see me?</p>-->
-        <!--<button @click="show = !show">change</button>-->
+    <!--<p v-if="show">You can see me!</p>-->
+    <!--<p v-else>now you see me tooooooo!</p>-->
+    <!--&lt;!&ndash;<templeate v-if="show">&ndash;&gt;-->
+    <!--&lt;!&ndash;<h1>Title</h1>&ndash;&gt;-->
+    <!--&lt;!&ndash;<p>Inside template</p>&ndash;&gt;-->
+    <!--&lt;!&ndash;</templeate>&ndash;&gt;-->
+    <!--<p v-show="show">Do you also see me?</p>-->
+    <!--<button @click="show = !show">change</button>-->
     <!--</div>-->
 
     <!--<hr>-->
 
     <!--<div id="exercise7">-->
-        <!--<ul>-->
-            <!--<li v-for="(ingredient, i) in ingredients" :key="ingredient">{{ ingredient }} ({{ i }})</li>-->
-        <!--</ul>-->
-        <!--<button @click="ingredients.push('spices')">add</button>-->
-        <!--<ul>-->
-            <!--<li v-for="person in persons">-->
-                <!--<div v-for="(value, key, index) in person">{{value}}({{key}}) [{{index}}]</div>-->
-            <!--</li>-->
-        <!--</ul>-->
-        <!--<ul>-->
-            <!--<li v-for="n in 10">{{n}}</li>-->
-        <!--</ul>-->
+    <!--<ul>-->
+    <!--<li v-for="(ingredient, i) in ingredients" :key="ingredient">{{ ingredient }} ({{ i }})</li>-->
+    <!--</ul>-->
+    <!--<button @click="ingredients.push('spices')">add</button>-->
+    <!--<ul>-->
+    <!--<li v-for="person in persons">-->
+    <!--<div v-for="(value, key, index) in person">{{value}}({{key}}) [{{index}}]</div>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--<ul>-->
+    <!--<li v-for="n in 10">{{n}}</li>-->
+    <!--</ul>-->
     <!--</div>-->
 
     <!--Section4-->
@@ -155,8 +154,7 @@
             <div class="col-lg-6 columns">
                 <h1 class="text-center">YOU</h1>
                 <div class="healthbar">
-                    <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
-                         :style="{ width: players.user.life + '%'}">
+                    <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{ width: players.user.life + '%'}">
                         {{players.user.life}}
                     </div>
                 </div>
@@ -164,8 +162,7 @@
             <div class="col-lg-6 columns">
                 <h1 class="text-center">MONSTER</h1>
                 <div class="healthbar">
-                    <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
-                         :style="{ width: players.monster.life + '%'}">
+                    <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{ width: players.monster.life + '%'}">
                         {{players.monster.life}}
                     </div>
                 </div>
@@ -188,8 +185,7 @@
             <div class="col-lg-12 columns">
                 <ul>
                     <li v-for="action in actions">
-                        <div style=" color: #fff"
-                             :style="{ backgroundColor: action.type == 'attack' || action.type == 'specialAttack' ? 'red' : 'green' }">
+                        <div style=" color: #fff" :style="{ backgroundColor: action.type == 'attack' || action.type == 'specialAttack' ? 'red' : 'green' }">
                             <span v-if="action.type === 'attack'">
                                 Damage to {{ action.to }} -{{ action.damage }}
                             </span>
@@ -205,8 +201,8 @@
             </div>
         </section>
     </div>
-    Section5
-    <div id="exercise8">
+    <!-- Section5 -->
+    <!-- <div id="exercise8">
         <h1 ref="heading">{{ title }}</h1>
         <button v-on:click="show" ref="myButton">Show Paragraph</button>
         <p v-if="showParagraph" ref="parag">This is not always visible</p>
@@ -214,9 +210,21 @@
     <div id="exercise9">
         <h1 ref="heading">{{ title }}</h1>
         <button v-on:click="onChange" ref="myButton">Show Paragraph</button>
-    </div>
+    </div> -->
+
     <!--Templeting-->
-    <div id="exercise10">
+    <!-- <div id="exercise10">
+    </div> -->
+    <!--components-->
+    <div id="exercise11">
+        <my-component></my-component>
+        <hr>
+        <my-component></my-component>
+    </div>
+    <div id="exercise12">
+        <my-component></my-component>
+        <hr>
+        <my-component></my-component>
     </div>
     <script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
     <script src="./assets/js/app.js"></script>
